@@ -1,11 +1,11 @@
 {
-  "name": "vite-template",
+  "name": "product",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vite-template/",
+    "build": "vite build --base=/product/",
     "preview": "vite preview"
   },
   "devDependencies": {
