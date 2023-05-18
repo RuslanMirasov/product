@@ -1,5 +1,88 @@
-.formBox {
-   display: block;
-   max-width: 600px;
-   margin: 50px auto;
+.section--hero {
+  padding: 25px 0px 58px 0px;
+  .forBtn {
+    width: 100%;
+    order: 2;
+  }
+  .titleBox {
+    margin-top: 100px;
+    order: 2;
+    &.mw_465 {
+      margin-top: 0px;
+      max-width: 465px;
+    }
+    .forBtn {
+      margin-top: 45px;
+    }
+    .subtitle {
+      margin-top: 18px;
+    }
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 12px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 4500px;
+    height: 4500px;
+    border-radius: 2324px;
+    background: linear-gradient(0deg, #ededed 1%, rgba(255, 255, 255, 0) 12%);
+    transform: translate(-50%, 0%);
+  }
+}
+
+.hero-image {
+  max-width: 100%;
+  order: 2;
+  @media screen and (max-width: 767px) {
+    order: 1;
+  }
+}
+
+.dark {
+  .section--hero {
+    &:before {
+      background: linear-gradient(0deg, #283942 1%, rgba(255, 255, 255, 0) 12%);
+    }
+  }
+}
+
+.built {
+  @include flex_center();
+  order: 2;
+  gap: 30px;
+  margin: 50px 0px;
+  .built__inner {
+    max-width: 255px;
+    h3 {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: calc(33 / 22);
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: $color;
+  color: $white;
+  margin-bottom: 26px;
+  svg {
+    fill: currentColor;
+  }
 }

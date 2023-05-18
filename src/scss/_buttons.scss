@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 24px;
+
   &.ta--c {
     justify-content: center;
   }
@@ -20,7 +21,7 @@
   align-items: center;
   font-size: 16px;
   line-height: calc(24 / 16);
-  font-weight: 600;
+  font-weight: 700;
   padding: 8px 24px;
   border-radius: 4px;
   border: 1px solid $button-color;
@@ -42,10 +43,30 @@
       background: $grey;
     }
   }
+  &.button--link {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    text-decoration: underline;
+    padding: 0px;
+    color: $color;
+    font-weight: 600;
+    &:hover,
+    &:focus {
+      background: rgba(0, 0, 0, 0);
+    }
+  }
+  &.big {
+    min-width: 178px;
+    padding: 14px;
+  }
   &:disabled {
     opacity: 0.5;
     cursor: auto;
     pointer-events: none;
+  }
+  svg {
+    margin-right: 8px;
+    fill: currentColor;
   }
 }
 
@@ -101,6 +122,9 @@
         background: $grey;
         color: $black;
       }
+    }
+    &.button--link {
+      color: $white;
     }
   }
   .tumbler {

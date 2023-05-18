@@ -1,47 +1,45 @@
 /*----------------------------------------------- TYPOGRAPHY */
 
-.title-wrapp {
-   display: inline-block;
-   width: 100%;
-}
-
-.title-wrapp > * {
-   margin-top: 20px;
-}
-
-.title-wrapp > *:first-child {
-   margin-top: 0px;
+.titleBox {
+  display: inline-block;
+  width: 100%;
+  > * {
+    display: inline-block;
+    width: 100%;
+  }
+  &.ta--c {
+    text-align: center;
+  }
+  &.ta--r {
+    text-align: right;
+  }
 }
 
 .title {
-   &.title--h1 {
-      font-weight: 500;
-      @media screen and (max-width: 767px) {
-         font-size: 30px;
-      }
-      @media screen and (min-width: 768px) and (max-width: 1279px) {
-         font-size: 42px;
-      }
-      @media screen and (min-width: 1280px) {
-         font-size: 64px;
-      }
-   }
-   &.title--h2 {
-      font-weight: 600;
-      @media screen and (max-width: 767px) {
-         font-size: 20px;
-      }
-      @media screen and (min-width: 768px) {
-         font-size: 32px;
-      }
-   }
+  font-weight: 700;
+  font-size: 32px;
+  line-height: calc(48 / 32);
+  &.title--hero {
+    @media screen and (max-width: 767px) {
+      font-size: 36px;
+      line-height: calc(60 / 36);
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 40px;
+      line-height: calc(60 / 40);
+    }
+  }
+}
+
+.overtitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  margin-bottom: 8px;
 }
 
 .subtitle {
-   @media screen and (max-width: 767px) {
-      font-size: 36px;
-   }
-   @media screen and (min-width: 768px) {
-      font-size: 20px;
-   }
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  margin-top: 25px;
 }
